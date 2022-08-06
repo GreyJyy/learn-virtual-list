@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for test</title>
+  </head>
+
+  <body>
+    <!-- 外部可视区容器 -->
+    <div class="outer-list">
+      <!-- 内部数据容器 高度为数据量*单数据高度 -->
+      <div class="inner-list"></div>
+    </div>
+
+    <script src="../js/mock.js"></script>
+    <script>
+      const data = mock(1000000) //模拟数据
+      const outer = document.querySelector('.outer-list')
+      const inner = document.querySelector('.inner-list')
+    </script>
+    <script src="../js/virtual-fixed.js"></script>
+  </body>
+  <style>
+    .outer-list {
+      overflow: auto;
+      height: 500px;
+    }
+  </style>
+</html>
